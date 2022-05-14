@@ -26,5 +26,6 @@ urlpatterns = [
     path('login/',include('login.urls')),
     path('tiezi/',include('tiezi.urls')),
     path('leavemessage/',include('leavemessage.urls')),
+    path('kepu/',include('kepu.urls')),
     url(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 ]

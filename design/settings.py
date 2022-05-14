@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'tiezi',
-    "leavemessage"
+    "leavemessage",
+    "kepu",
+    "slick"
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'design2',
         'USER':'root',
-        "PASSWORD":'*!Lqy13579=',
+        "PASSWORD":'root',
         "HOST":"127.0.0.1",
         "PORT":"3306",
     }

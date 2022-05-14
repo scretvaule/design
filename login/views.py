@@ -12,15 +12,17 @@ def getform(request):
     if request.method=='POST':
         name=request.POST['name']
         sex=request.POST['sex']
-        faculty=request.POST['faculty']
-        grade=request.POST['grade']
         photopaths=request.FILES.get('photopaths')
-        selftext=request.POST['selftext']
         numberoflike=request.POST['numberoflike']
         numberofpost=request.POST['numberofpost']
         openid=request.POST['openid']
         numberofcollect=request.POST['numberofcollect']
-        people.objects.create(name=name,sex=sex,faculty=faculty,grade=grade,photopaths=photopaths,selftext=selftext,numberoflike=numberoflike,numberofpost=numberofpost,openid=openid,numberofcollect=numberofcollect)
+        weight=request.POST['weight']
+        height = request.POST['height']
+        binshi=request.POST["binshi"]
+        bir=request.POST['bir']
+        familyid=request.POST['familyid']
+        people.objects.create(name=name,familyid=familyid,sex=sex,weight=weight,bingshi=binshi,bir=bir,height=height,photopaths=photopaths,numberoflike=numberoflike,numberofpost=numberofpost,openid=openid,numberofcollect=numberofcollect)
         return HttpResponse("success")
     else:
         return HttpResponse("fail")
